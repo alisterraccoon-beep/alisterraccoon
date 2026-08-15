@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alister Raccoon | Official Links</title>
+  <meta name="description" content="Ouça Alister Raccoon — Phonk, Nightcore e Dark Electronic.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(142, 45, 226, 0.25), transparent 35%),
+        radial-gradient(circle at 10% 80%, rgba(92, 20, 160, 0.12), transparent 30%),
+        #050507;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(255,255,255,.5) 1px, transparent 1px);
+      background-size: 80px 80px;
+      opacity: .08;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      margin: auto;
+      padding: 35px 20px 45px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* TOPO */
+
+    .profile {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .avatar {
+      width: 115px;
+      height: 115px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        radial-gradient(circle at 50% 40%, #9d4edd, #251035 60%, #09060c);
+
+      border: 2px solid #9d4edd;
+
+      box-shadow:
+        0 0 15px #9d4edd,
+        0 0 45px rgba(157, 78, 221, .45);
+
+      font-size: 48px;
+    }
+
+    .profile h1 {
+      font-size: 30px;
+      letter-spacing: 3px;
+      font-weight: 800;
+
+      text-shadow:
+        0 0 8px #b45cff,
+        0 0 25px rgba(157,78,221,.8);
+    }
+
+    .subtitle {
+      margin-top: 9px;
+      color: #c7a8dd;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+    }
+
+    .tagline {
+      margin-top: 9px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    /* SEÇÕES */
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #b66cff;
+      margin-bottom: 13px;
+      font-weight: bold;
+    }
+
+    /* BOTÕES */
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      min-height: 58px;
+
+      margin-bottom: 12px;
+      padding: 15px 20px;
+
+      color: white;
+      text-decoration: none;
+
+      border: 1px solid rgba(173, 82, 255, .55);
+      border-radius: 15px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(157, 78, 221, .16),
+          rgba(15, 10, 20, .85)
+        );
+
+      box-shadow:
+        0 0 10px rgba(157,78,221,.08),
+        inset 0 0 20px rgba(157,78,221,.03);
+
+      font-size: 15px;
+      font-weight: 700;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-3px);
+
+      border-color: #b45cff;
+
+      box-shadow:
+        0 0 15px rgba(180,92,255,.55),
+        0 0 35px rgba(157,78,221,.25);
+    }
+
+    .link:active {
+      transform: scale(.98);
+    }
+
+    /* DESTAQUE */
+
+    .featured {
+      border: 1px solid #b45cff;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(157,78,221,.30),
+          rgba(25,10,35,.95)
+        );
+
+      box-shadow:
+        0 0 20px rgba(157,78,221,.25),
+        inset 0 0 25px rgba(157,78,221,.06);
+    }
+
+    .featured small {
+      display: block;
+      color: #d4b0ee;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      margin-bottom: 6px;
+    }
+
+    .featured strong {
+      font-size: 18px;
+    }
+
+    /* BOTÕES DE PLATAFORMA */
+
+    .platform {
+      position: relative;
+    }
+
+    .platform::before {
+      content: "●";
+      position: absolute;
+      left: 18px;
+      color: #b45cff;
+      text-shadow: 0 0 10px #b45cff;
+    }
+
+    /* UNIVERSO */
+
+    .universe {
+      margin-top: 35px;
+      padding: 25px 20px;
+
+      text-align: center;
+
+      border-radius: 18px;
+
+      border: 1px solid rgba(180,92,255,.45);
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(157,78,221,.15),
+          rgba(5,5,7,.85)
+        );
+
+      box-shadow:
+        0 0 25px rgba(157,78,221,.12);
+    }
+
+    .universe-icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 10px #b45cff);
+    }
+
+    .universe h2 {
+      font-size: 17px;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .universe p {
+      color: #999;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+      text-align: center;
+      margin-top: 35px;
+      color: #555;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    footer span {
+      color: #9d4edd;
+    }
+
+    /* ANIMAÇÃO */
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow:
+          0 0 15px #9d4edd,
+          0 0 45px rgba(157,78,221,.35);
+      }
+
+      50% {
+        box-shadow:
+          0 0 25px #b45cff,
+          0 0 65px rgba(157,78,221,.55);
+      }
+    }
+
+    .avatar {
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        padding: 28px 16px 35px;
+      }
+
+      .profile h1 {
+        font-size: 25px;
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- PERFIL -->
+
+    <header class="profile">
+
+      <div class="avatar">
+        🦝
+      </div>
+
+      <h1>ALISTER RACCOON</h1>
+
+      <p class="subtitle">
+        PHONK • NIGHTCORE • DARK ELECTRONIC
+      </p>
+
+      <p class="tagline">
+        🌌 Enter the Raccoon Universe
+      </p>
+
+    </header>
+
+
+    <!-- LANÇAMENTO -->
+
+    <section class="section">
+
+      <div class="section-title">
+        🔥 NOVO LANÇAMENTO
+      </div>
+
+      <a
+        class="link featured"
+        href="https://open.spotify.com/track/2VarTyC6D6QQkYkntw5SUx"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>
+          <small>OUÇA AGORA</small>
+          🌙 <strong>Lonely Stars</strong>
+        </span>
+      </a>
+
+    </section>
+
+
+    <!-- MÚSICAS -->
+
+    <section class="section">
+
+      <div class="section-title">
+        🎵 MINHAS MÚSICAS
+      </div>
+
+      <a
+        class="link"
+        href="https://open.spotify.com/track/2VarTyC6D6QQkYkntw5SUx"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🌙 Lonely Stars
+      </a>
+
+      <a
+        class="link"
+        href="https://open.spotify.com/track/7KnPfnyy4HY8y3NxUmn4Bi"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🔥 Wings of Fire
+      </a>
+
+    </section>
+
+
+    <!-- PLATAFORMAS -->
+
+    <section class="section">
+
+      <div class="section-title">
+        🎧 OUÇA ALISTER RACCOON
+      </div>
+
+      <a
+        class="link platform"
+        href="https://open.spotify.com/user/31qcchjp6tlql2wyraoeaupxe6ci"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Spotify
+      </a>
+
+      <a
+        class="link platform"
+        href="https://amazon.com/music/player/artists/B0H1TC7QYF/alister-raccoon?marketplaceId=ATVPDKIKX0DER&musicTerritory=US"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Amazon Music
+      </a>
+
+      <a
+        class="link platform"
+        href="https://youtube.com/channel/UC1fEEImd1sSlTxEpOWeHZgg"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        YouTube
+      </a>
+
+    </section>
+
+
+    <!-- REDES -->
+
+    <section class="section">
+
+      <div class="section-title">
+        📱 SIGA NAS REDES
+      </div>
+
+      <a
+        class="link"
+        href="https://www.tiktok.com/@alisterraccoon"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🎵 TikTok
+      </a>
+
+      <a
+        class="link"
+        href="https://www.instagram.com/alister.raccoon"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        📸 Instagram
+      </a>
+
+    </section>
+
+
+    <!-- RACCOON UNIVERSE -->
+
+    <section class="universe">
+
+      <div class="universe-icon">
+        🦝
+      </div>
+
+      <h2>THE RACCOON UNIVERSE</h2>
+
+      <p>
+        Music is only the beginning.
+      </p>
+
+      <a
+        class="link"
+        href="#"
+      >
+        🌌 ENTER THE UNIVERSE
+      </a>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+      <p>
+        <span>ALISTER RACCOON RECORDS</span>
+      </p>
+
+      <p>
+        © 2026 Alister Raccoon
+      </p>
+    </footer>
+
+  </main>
+
+</body>
+  </html> 
